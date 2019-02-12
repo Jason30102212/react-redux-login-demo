@@ -52,5 +52,7 @@ Sprint Backlog:
        - Priority 3. Set up express server.
        - Priority 4. Create a test model, route and validation, and then test to ensure the server is working correctly with postman
    - Build
+    - 2/13/2019
+      - Create git project and upload to GitHub.
    - Test
    - Review
