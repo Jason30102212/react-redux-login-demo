@@ -37,17 +37,52 @@ SCRUM:
 
 Product Backlog (Prioritized list of features):
   - 2/13/2019
-    - Priority 1. Create git project and upload to GitHub.
-    - Priority 2. Create app by initializing the project, installing required libraries and testing.
-    - Priority 3. Set up express server.
-    - Priority 4. Create a test model, route and validation, and then test to ensure the server is working correctly with Postman
+    - TRANSFERRED TO SPRINT BACKLOG: Priority 1. Create git project and upload to GitHub.
+    - TRANSFERRED TO SPRINT BACKLOG: Priority 2. Create app by initializing the project, installing required libraries and testing.
+    - TRANSFERRED TO SPRINT BACKLOG: Priority 3. Set up express server.
+    - TRANSFERRED TO SPRINT BACKLOG: Priority 4. Create a test model, route and validation, and then test to ensure the server is working correctly with Postman
+    - TRANSFERRED TO SPRINT BACKLOG: Priority 1. Update routes in users.js
+    - TRANSFERRED TO SPRINT BACKLOG: Priority 2. Create validation for User (Register, Login, Current User)
+    - TRANSFERRED TO SPRINT BACKLOG: Priority 3. Test routes and validation for backend login and register
+
 
 Sprint Backlog:
   - 2/13/2019
+    - COMPLETE: Priority 1. Create git project and upload to GitHub.
+    - COMPLETE: Priority 2. Create app by initializing the project, installing required libraries and testing.
+    - COMPLETE: Priority 3. Set up express server.
+    - COMPLETE: Priority 4. Create a test model, route and validation, and then test to ensure the server is working correctly with Postman
+    - COMPLETE: Priority 1. Update routes in users.js
+    - COMPLETE: Priority 2. Create validation for User (Register, Login, Current User)
+    - COMPLETE: Priority 3. Test routes and validation for backend login and register
 
+SPRINT LOG
 
-  SPRINT LOG
- - 2/13/2019 Second Spring
+  - 2/14/2019 Third Sprint
+    - Plan
+      - 2/14/2019
+        - Preparation:
+        - Priority 1. Update routes in users.js
+        - Priority 2. Create validation for User (Register, Login, Current User)
+        - Priority 3. Priority 3. Test routes and validation for backend login and register
+    - Build
+      - 2/14/2019
+        - Created validation folder and login.js and register.js validation folders
+        - Created helper file is-empty.js
+        - Added register, login and find current user by email routes.
+        -
+    - Test
+      - 2/15/2019
+        - Minor spelling errors fixed in register route (Wrong function being called).
+        - Fixed isEmpty helper function
+        - Fixed minor spelling error in login.js validation.
+    - Review
+      - 2/15/2019
+        - Fixed bugs. Seems to be working fine.
+        - Can move on to front end development, but will need to add other routes as needed
+----------
+
+  - 2/13/2019 Second Sprint
    - Plan
      - 2/13/2019
        - Preparation:
@@ -108,5 +143,15 @@ Sprint Backlog:
           - Tested ignored files
             -
    - Test
+      - Tested scripts defined in package.json
+        - Tested test. Works, but no tests are implemented
+        - Tested start. Works.
+        - Tested server. Works.
+      - Tested express server. Running on port 5555. Works correctly.
+      - Tested mongoose
+      - Tested test route in routes/api/users.js. Worked correctly.
+
    - Review
-      - Didn't create test validation. Would be unusable with current test route
+      - Didn't create test validation. Would be unusable with current test route.
+      - No noticeable bugs or errors.
+      - Will need to update scripts in package.json
