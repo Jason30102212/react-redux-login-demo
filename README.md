@@ -1,7 +1,7 @@
 "# react-redux-login-demo"
 
 ABOUT THIS SITE:
-  - This app will be a demonstration of a React/ Redux login app. It will have a MongoDB backend that is accessed with the mongoose library. It will also use the express library as a server.
+  - This app will be a demonstration of a React/ Redux login app. It will have a MongoDB backend that is accessed with the mongoose library. It will also use the express library as a server. This is based on the following tutorial: DevConnector
 
 INSTALL:
   1. Create mLab database
@@ -44,7 +44,7 @@ Product Backlog (Prioritized list of features):
     - TRANSFERRED TO SPRINT BACKLOG: Priority 1. Update routes in users.js
     - TRANSFERRED TO SPRINT BACKLOG: Priority 2. Create validation for User (Register, Login, Current User)
     - TRANSFERRED TO SPRINT BACKLOG: Priority 3. Test routes and validation for backend login and register
-
+    - TRANSFERRED TO SPRINT BACKLOG: Priority 1. Create the frontend that implements the signup and register processes
 
 Sprint Backlog:
   - 2/13/2019
@@ -55,9 +55,112 @@ Sprint Backlog:
     - COMPLETE: Priority 1. Update routes in users.js
     - COMPLETE: Priority 2. Create validation for User (Register, Login, Current User)
     - COMPLETE: Priority 3. Test routes and validation for backend login and register
+    - COMPLETE: Priority 1. Create the frontend that implements the signup and register processes
+
 
 SPRINT LOG
 
+  - 2/15/2019 Fourth Sprint
+    - Plan
+      - 2/15/2019
+        - Preparation:
+        - Priority 1. Create the frontend that implements the signup and register processes
+          - Initiate create-react-app in client file to hold the front end.
+          - Install the following libraries into react app (Not server):
+            - axios
+            - classnames
+            - jwt-decode
+            - moment
+            - react
+            - react-dom
+            - react-moment
+            - react-redux
+            - react-router-dom
+            - react-scripts
+            - redux
+            - redux-thunk
+          - Ensure package.json scripts are correct
+          - Ensure proxy is properly defined
+          - Test to make sure client and server work together correctly
+          - Create the following folders in client/src folder:
+            - actions
+            - components
+            - reducers
+            - utils
+            - validation
+          - In utils folder, create setAuthToken function to add/ delete Authorization header
+          - In components/common create <PrivateRoute>
+            - That takes in a component and renders it if user is authenticated, or redirects to login if not.
+          - In src, create store.js to hold state, apply middleware and configure redux dev tools
+          - Configure App.js:
+            - Check for token provider
+            - Ensure <Provider /> component wraps other content to allow access to store
+            - Ensure <Router /> (BrowserRouter as Router) is wrapped around content to allow history
+            - Create test route that doesn't require login
+            - Create switch that will render a component if user is logged in
+            - Test the route and switch
+            - In common folder, create <InputGroup>, <SelectListGroup>, <TextAreaFieldGroup> and <TextAreaFieldGroup>
+            - Create auth folder in components folder, and create <Login> and <Register> components
+            - Create authActions.js in actions folder
+            - Create authReducer.js in reducers folder as well as index
+            - Set up <Login> and <Register> components in app.js
+            - Test frontend login functionality
+
+
+    - Build
+      - 2/15/2019
+        - Installed dependencies
+        - Scripts confirmed to be correct
+        - Proxy defined in package.json
+        - Tested to make sure server and client launch (Success)
+        - Created folders in src
+        - Created setAuthToken.js to add/ delete Authorization token to headers
+        - In component/common folder, <PrivateRoute> was created.
+        - Created store.js
+        - Created registerUser(), loginUser(), setCurrentUser() and logoutUser() functions in authActions.js
+        - Added is-empty.js to scr/validation
+        - Created authReducer.js and added function to handle SET_CURRENT_USER case
+        - Created reducers/index.js to combine all reducers
+        - Created errorReducer.js and added function to handle errors
+        - UNSPECIFIED IN PLAN: Created /src/components/layout folder and <Landing> component within
+        - UNSPECIFIED IN PLAN: Created /src/components/dashboard folder and <Dashboard> component within (<Dashboard> will need to be expanded upon)
+        - Created profileAction.js
+        - Updated src/actions/types.js with constants
+        - Tested route that doesn't require login(worked)
+        - Added img folder with image for styling
+        - Added bootstrap scripts and links into public/index.html
+        - Created <Login> component
+        - Created <Register> component
+        - Created routes for <Login> and <Register> in app.js
+        - Created <Education>, <Experience> and <ProfileActions>
+        - Updated src/common components
+        - Created profileReducer.js reducer
+        - Created <Navbar> and <Footer> components in src/components/layout
+        - Added <Navbar> and <Footer> components in App.js with routes
+        - IMPORTANT! ignore /client/node_modules (DONE)
+
+    - Test
+      - 2/16/2019
+        - npm run dev runs both frontend and backend
+        - Frontend runs on localhost:3000
+        - Loads to "/" route and displays <Navbar>, <Landing> and <Footer>
+        - "Developer" placeholder redirects to "/profile" but displays blank
+        - "Sign Up" link redirects correctly to "/register" and displays <Register>
+        - Sign up seems to be working correctly
+          - Errors display when fields are incorrectly entered
+          - Adds new user
+        - Login seems to be working correctly  
+          - Errors display when fields are incorrectly entered
+          - Login in user
+          - Redirects to "/dashboard"
+          - /client/node_modules ignored
+    - Review
+      - 2/16/2019
+        - "/profile" route will need to be established to display <Profile>
+        - "/feed" route will need to be established
+        - "/create-profile" route will need to be established
+        
+----------
   - 2/14/2019 Third Sprint
     - Plan
       - 2/14/2019

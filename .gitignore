@@ -7,3 +7,6 @@
 
 # constants for mLab DB for dev environment
 /config/dev_constants.js
+
+# client
+/client/node_modules
